@@ -1,0 +1,10 @@
+.card {
+    padding: 0;
+}
+
+#question-window,
+#result-window,
+#timesup-window,
+#score-window {
+    display: none;
+}

@@ -14,86 +14,88 @@
         <a href="#" class="navbar-brand">Carlos Costoso</a>
     </nav>
 
-    <main id="start-window" class="jumbotron container my-auto text-center">
-        <h1 class="display-4">It's time for a quiz.</h1>
-        <br>
-        <br>
-        <br>
-        <button id="start-button" class="btn btn-success">Let's begin.</button>
-    </main>
+    <div class="container my-4">
+        <main id="start-window" class="jumbotron container my-auto text-center">
+            <h1 class="display-4">It's time for a quiz.</h1>
+            <br>
+            <br>
+            <br>
+            <button id="start-button" class="btn btn-success">Let's begin.</button>
+        </main>
 
-    <main id="question-window" class="card container my-auto text-center">
-        <section class="card-header">
-            <h3 id="question-display" class="card-title">
-                <!-- To be populated with jQuery. -->
-            </h3>
-        </section>
-        <section class="card-body">
-            <h5>Time remaining: <span id="time-display"></span></h5>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div id="responses-display">
-                <!-- To be populated with jQuery. -->
-            </div>
-        </section>
-    </main>
+        <main id="question-window" class="card container my-auto text-center">
+            <section class="card-header">
+                <h3 id="question-display" class="card-title">
+                    <!-- To be populated with jQuery. -->
+                </h3>
+            </section>
+            <section class="card-body">
+                <h5>Time remaining: <span id="time-display"></span></h5>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div id="responses-display">
+                    <!-- To be populated with jQuery. -->
+                </div>
+            </section>
+        </main>
 
-    <main id="result-window" class="card container my-auto text-center">
-        <section class="card-header">
-            <h3 id="result-header" class="card-title">
-                <!-- To be populated with jQuery. -->
-            </h3>
-        </section>
-        <section class="card-body">
-            <h3 id="result-status"></h3>
-            <p class="correct-option">
-                <!-- To be populated with jQuery. -->
-            </p>
-            <img id="reaction-gif" />
-            <br>
-            <br>
-            <br>
-            <br>
-            <button class="btn btn-outline-success continue-button">
-                Continue
-            </button>
-        </section>
-    </main>
+        <main id="result-window" class="card container my-auto text-center">
+            <section class="card-header">
+                <h3 id="result-header" class="card-title">
+                    <!-- To be populated with jQuery. -->
+                </h3>
+            </section>
+            <section class="card-body">
+                <h3 id="result-status"></h3>
+                <p class="correct-option">
+                    <!-- To be populated with jQuery. -->
+                </p>
+                <img id="result-reaction" />
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="btn btn-outline-success continue-button">
+                    Continue
+                </button>
+            </section>
+        </main>
 
-    <main id="timesup-window" class="card container my-auto text-center">
-        <section class="card-header">
-            <h3 class="card-title">Time's Up!</h3>
-        </section>
-        <section class="card-body">
-            <p class="correct-option">
-                <!-- To be populated with jQuery. -->
-            </p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <button class="btn btn-outline-success continue-button">
-                Continue
-            </button>
-        </section>
-    </main>
+        <main id="timesup-window" class="card container my-auto text-center">
+            <section class="card-header">
+                <h3 class="card-title">Time's Up!</h3>
+            </section>
+            <section class="card-body">
+                <p class="correct-option">
+                    <!-- To be populated with jQuery. -->
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="btn btn-outline-success continue-button">
+                    Continue
+                </button>
+            </section>
+        </main>
 
-    <main id="score-window" class="card container my-auto text-center">
-        <section class="card-header">
-            <h5>Your score:
-        </section>
-        <section class="card-body">
-            <h3 id="score-display"></h3>
-            <br>
-            <br>
-            <br>
-            <br>
-            <button id="new-game" class="btn btn-outline-success">Try again?</button>
-        </section>
-    </main>
-
+        <main id="score-window" class="card container my-auto text-center">
+            <section class="card-header">
+                <h5>Your score:
+            </section>
+            <section class="card-body">
+                <h3 id="score-display"></h3>
+                <br>
+                <br>
+                <img id="score-reaction" src="" alt="">
+                <br>
+                <br>
+                <button id="new-game" class="btn btn-outline-success">Try again?</button>
+            </section>
+        </main>
+    </div>
     <footer class="footer mt-auto py-3 bg-light text-center">Footer.</footer>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

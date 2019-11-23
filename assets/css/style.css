@@ -8,3 +8,8 @@
 #score-window {
     display: none;
 }
+
+#result-reaction,
+#score-reaction {
+    height: 15rem;
+}

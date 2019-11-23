@@ -58,13 +58,15 @@ var questionsArr = [
 var score = 0;
 var questionNumber = 1;
 var selectedQuestion = questionsArr[questionNumber - 1];
+var isCorrect = false;
+var passed = false;
 
 function emptyDisplays() {
     $("#question-display").empty();
     $("#responses-display").empty();
     $("#result-header").empty();
     $("#result-status").empty();
-    $("#reaction-gif").attr("src", "");
+    $("#result-reaction").attr("src", "");
     $("#correct-option").empty();
     $("#score-display").empty();
 }
@@ -135,9 +137,12 @@ function playRound() {
             clearInterval(timerDisplay);
             clearTimeout(timesUp);
 
-            // The #result-window window informs user they selected the correct response.
+            // The #result-window window informs user they selected the correct response...
             $("#result-header").text("Your response to question #" + questionNumber);
             $("#result-status").text("...Correct!");
+
+            // #result-reaction src set to success gif.
+            $("#result-reaction").attr("src", "assets/media/images/sucess.gif");
         });
 
         // ...and they click on the incorrect response...
@@ -154,6 +159,9 @@ function playRound() {
             $("#result-header").text("Your response to question #" + questionNumber);
             $("#result-status").text("...Incorrect!");
             $(".correct-option").text("The correction option was: " + selectedQuestion.answer);
+
+            // #result-reaction src set to fail gif.
+            $("#result-reaction").attr("src", "assets/media/images/fail.gif");
         });
     }
 }
@@ -196,6 +204,12 @@ $(document).on("click", ".continue-button", function() {
 
         // ...we populate the #score-display display with the user's score
         $("#score-display").text(score / questionsArr.length * 100 + "%");
+
+        if ((score / questionsArr.length * 100) >= 75) {
+            $("#score-reaction").attr("src", "assets/media/images/win.gif");
+        } else {
+            $("#score-reaction").attr("src", "assets/media/images/lose.gif");
+        }
     }
 })
 

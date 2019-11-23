@@ -67,7 +67,7 @@ function emptyDisplays() {
     $("#result-header").empty();
     $("#result-status").empty();
     $("#result-reaction").attr("src", "");
-    $("#correct-option").empty();
+    $(".correct-option").empty();
     $("#score-display").empty();
 }
 
@@ -168,6 +168,8 @@ function playRound() {
 
 // Declare game starting function as event
 $("#start-button").on("click", function() {
+    // emptyDisplays();
+
     // Proceed to first question window
     $("#start-window").hide();
     $("#question-window").show();
@@ -178,6 +180,8 @@ $("#start-button").on("click", function() {
 
 // When the user clicks on a .continue-button...
 $(document).on("click", ".continue-button", function() {
+    // emptyDisplays();
+
     // If user is not on the last question...
     if (questionNumber < questionsArr.length) {
         // ...the questionNumber increases by one
@@ -190,7 +194,7 @@ $(document).on("click", ".continue-button", function() {
 
         // ...the #question-window window is populated with next question, and user will play new round
         $("#question-window").show();
-        playRound(selectedQuestion);
+        playRound();
         
 
     // ...Otherwise...
